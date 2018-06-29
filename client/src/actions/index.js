@@ -28,6 +28,9 @@ export function signinUser({email, password}) {
 
 export function signoutUser() {
   localStorage.removeItem('token')
+  axios.get(`${ROOT_URL}/logout`)
+   .then(response => console.log(response))
+   .catch(err => console.log("CRAP!!!!", err))
   return {
     type: UNAUTH_USER
   }
@@ -45,10 +48,13 @@ export function signupUser({firstName, lastName, email, password, passwordConfir
         homeCity
       })
       .then(response => {
+         console.log("IN SUCCESS RESPONSE", response)
         dispatch({type: AUTH_USER})
+        localStorage.removeItem('token')
         localStorage.setItem('token', response.data.token)
       })
       .catch(({response}) => {
+         console.log("OH NO ERROR!", response);
         dispatch(authError(response.data.error))
       })
   }
@@ -67,6 +73,7 @@ export function fetchMessage() {
       headers: {authorization: localStorage.getItem('token')}
     })
       .then(response => {
+         console.log("FETCH's MEssage: ", response.data.message)
         dispatch({
           type: FETCH_MESSAGE,
           payload: response.data.message

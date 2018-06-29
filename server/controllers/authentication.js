@@ -3,7 +3,8 @@ const User = require('../models/user');
 const config = require('../config');
 
 function tokenForUser(user) {
-  const timestamp = new Date().getTime();
+
+  const timestamp = new Date(parseInt(user.id.substring(0,8), 16) * 1000);
   return jwt.encode({sub: user.id, iat: timestamp}, config.secret)
 }
 

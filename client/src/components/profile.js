@@ -12,14 +12,14 @@ class Profile extends Component {
   render() {
     return (
       <div>
-        <p><strong>Welcome to the secure page!</strong></p>
+        <p><strong>Welcome to your profile!</strong></p>
         <br/>
-        <p>Here is a secret response from the server that your token returned:</p>
+        <p>Here is your profile info:</p>
         ____________________________________________________________
         <p>{this.props.message}</p>
         ____________________________________________________________
         <br/>
-        <p>Notice that clicking these links redirect to the homepage, as you are already signed in:</p>
+        <p>Here are some routes back to the homepage:</p>
         <p>
           <Link to={'/signin'}>/signin</Link> | <Link to={'/signup'}>/signup</Link>
         </p>

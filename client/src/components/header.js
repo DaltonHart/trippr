@@ -13,7 +13,7 @@ class Header extends Component {
           <Link className="nav-link" to="/signout">Sign Out</Link>
         </li>,
         <li key={2} className="nav-item">
-          <Link className="nav-link" to="/feature">Profile</Link>
+          <Link className="nav-link" to="/profile">Profile</Link>
         </li>
       ]
     } else {
@@ -25,7 +25,7 @@ class Header extends Component {
           <Link className="nav-link" to="/signup">Sign Up</Link>
         </li>,
         <li key={3} className="nav-item">
-          <Link className="nav-link" to="/feature">Profile</Link>
+          <Link className="nav-link" to="/profile">Profile</Link>
         </li>
       ]
     }
