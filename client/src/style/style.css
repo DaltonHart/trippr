@@ -11,13 +11,21 @@
   height: 5%;
   margin: 10px;
 }
-
+.navbar {
+  width: 100%;
+}
+.navbar ul{
+  float: right;
+  align-content: right;
+  width: 100%;
+}
 header{
   display: flex;
   flex-direction: row;
   background-color: cornflowerblue;
   padding: 0 1em;
   color: white;
+  position: static;
 }
 .nav-wrapper{
   width: 100%;
@@ -55,4 +63,6 @@ article h4{
 article{
   max-width: 30%;
   margin: 0 auto;
+  background-color: rgb(247, 243, 243);
+  padding: 1em;
 }

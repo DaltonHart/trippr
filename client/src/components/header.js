@@ -36,7 +36,7 @@ class Header extends Component {
       <header className="row">
         <img src={compass} alt="logo" className="logo col"/>
         <div className="nav-wrapper col">
-        <nav className="navbar navbar-light right">
+        <nav className="navbar navbar-light">
           <Link to="/" className="navbar-brand">Trippr</Link>
           <ul className="nav navbar-nav">
             {this.renderLinks()}
