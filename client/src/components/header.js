@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import compass from '../images/compass.svg'
+import '../style/style.css'
 
 class Header extends Component {
 
@@ -11,7 +13,7 @@ class Header extends Component {
           <Link className="nav-link" to="/signout">Sign Out</Link>
         </li>,
         <li key={2} className="nav-item">
-          <Link className="nav-link" to="/feature">Protected Site</Link>
+          <Link className="nav-link" to="/feature">Profile</Link>
         </li>
       ]
     } else {
@@ -23,7 +25,7 @@ class Header extends Component {
           <Link className="nav-link" to="/signup">Sign Up</Link>
         </li>,
         <li key={3} className="nav-item">
-          <Link className="nav-link" to="/feature">Protected Site</Link>
+          <Link className="nav-link" to="/feature">Profile</Link>
         </li>
       ]
     }
@@ -31,12 +33,15 @@ class Header extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-light">
-        <Link to="/" className="navbar-brand">Home</Link>
-        <ul className="nav navbar-nav">
-          {this.renderLinks()}
-        </ul>
-      </nav>
+      <div className="flexNav">
+        <img src={compass} alt="logo" className="logo"/>
+        <nav className="navbar navbar-light">
+          <Link to="/" className="navbar-brand">Trippr</Link>
+          <ul className="nav navbar-nav">
+            {this.renderLinks()}
+          </ul>
+        </nav>
+      </div>
     )
   }
 }
