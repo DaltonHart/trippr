@@ -5,7 +5,9 @@ import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
 class Signin extends Component {
+  state={
 
+  }
   componentWillUnmount() {
     if (this.props.errorMessage) {
       this.props.authError(null)
@@ -22,6 +24,7 @@ class Signin extends Component {
   }
 
   getRedirectPath() {
+    console.log("FAAACK", this.props.location)
     const locationState = this.props.location.state
     if (locationState && locationState.from.pathname) {
       return locationState.from.pathname // redirects to referring url
@@ -32,11 +35,7 @@ class Signin extends Component {
 
   render() {
     return (this.props.authenticated) ?
-      <Redirect to={{
-        pathname: this.getRedirectPath(), state: {
-          from: this.props.location
-        }
-      }}/>
+      <Redirect to="/profile" />
       :
       <div>
         {this.displayRedirectMessages()}

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import * as actions from '../actions'
 import { Link } from 'react-router-dom'
 
-class Feature extends Component {
+class Profile extends Component {
 
   componentWillMount() {
     this.props.fetchMessage()
@@ -14,7 +14,7 @@ class Feature extends Component {
       <div>
         <p><strong>Welcome to the secure page!</strong></p>
         <br/>
-        <p>Here's a secret response from the server that your token returned:</p>
+        <p>Here is a secret response from the server that your token returned:</p>
         ____________________________________________________________
         <p>{this.props.message}</p>
         ____________________________________________________________
@@ -35,4 +35,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, actions)(Feature)
+export default connect(mapStateToProps, actions)(Profile)
