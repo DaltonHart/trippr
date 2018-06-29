@@ -12,8 +12,8 @@ class Signup extends Component {
     }
   }
 
-  handleSubmit({email, password, passwordConfirmation}) {
-    this.props.signupUser({email, password, passwordConfirmation})
+  handleSubmit({firstName, lastName, email, password, passwordConfirmation, homeCity }) {
+    this.props.signupUser({firstName, lastName, email, password, passwordConfirmation, homeCity})
   }
 
   getRedirectPath() {
@@ -27,7 +27,7 @@ class Signup extends Component {
 
   render() {
     return (this.props.authenticated) ?
-      <Redirect to="/profile" />
+      <Redirect to="/profile"/>
       :
       <div>
         <SignupForm onSubmit={this.handleSubmit.bind(this)} errorMessage={this.props.errorMessage}/>

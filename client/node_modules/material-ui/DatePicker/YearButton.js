@@ -66,8 +66,7 @@ function getStyles(props, context, state) {
       position: 'relative',
       textAlign: 'center',
       lineHeight: 'inherit',
-      WebkitTapHighlightColor: 'rgba(0,0,0,0)' // Remove mobile color flashing (deprecated)
-    },
+      WebkitTapHighlightColor: 'rgba(0,0,0,0)' },
     label: {
       alignSelf: 'center',
       color: hover || selected ? datePicker.color : baseTheme.palette.textColor,
@@ -148,7 +147,7 @@ YearButton.defaultProps = {
 YearButton.contextTypes = {
   muiTheme: _propTypes2.default.object.isRequired
 };
-YearButton.propTypes = process.env.NODE_ENV !== "production" ? {
+process.env.NODE_ENV !== "production" ? YearButton.propTypes = {
   children: _propTypes2.default.node.isRequired,
   /**
    * The css class name of the root element.
@@ -158,5 +157,5 @@ YearButton.propTypes = process.env.NODE_ENV !== "production" ? {
   selected: _propTypes2.default.bool,
   utils: _propTypes2.default.object.isRequired,
   year: _propTypes2.default.number.isRequired
-} : {};
+} : void 0;
 exports.default = YearButton;

@@ -3,12 +3,18 @@
 }
 
 .logo {
-  width: 10%;
-  height: 10%;
+  width: 5%;
+  height: 5%;
   margin: 10px;
 }
 
-.flexNav {
+header{
   display: flex;
   flex-direction: row;
+  background-color: cornflowerblue;
+  padding: 0 1em;
+  color: white;
+}
+.nav-wrapper{
+  width: 100%;
 }
