@@ -32,11 +32,7 @@ class Signin extends Component {
 
   render() {
     return (this.props.authenticated) ?
-      <Redirect to={{
-        pathname: this.getRedirectPath(), state: {
-          from: this.props.location
-        }
-      }}/>
+      <Redirect to="/profile"/>
       :
       <div>
         {this.displayRedirectMessages()}
