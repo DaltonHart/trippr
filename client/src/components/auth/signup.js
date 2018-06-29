@@ -27,7 +27,7 @@ class Signup extends Component {
 
   render() {
     return (this.props.authenticated) ?
-      <Redirect to="/profile"/>
+      <Redirect to="/"/>
       :
       <div>
         <SignupForm onSubmit={this.handleSubmit.bind(this)} errorMessage={this.props.errorMessage}/>
