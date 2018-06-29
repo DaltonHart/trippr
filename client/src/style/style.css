@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 .error {
     color: red;
 }
@@ -17,4 +21,38 @@ header{
 }
 .nav-wrapper{
   width: 100%;
+  max-height: 10vh;
+}
+/* Landing Page */
+.topics {
+  margin: 0 1em;
+  display: flex;
+}
+.carousel-container{
+  width: 100%;
+  max-height: 30vh;
+}
+
+.slider{
+  max-height: 45vh;
+}
+.slider img {
+  max-height: 45vh;
+}
+section {
+  margin: 1em;
+  padding: 1em;
+}
+
+section h2{
+  text-align: center;
+}
+
+article h4{
+  text-align: center;
+}
+
+article{
+  max-width: 30%;
+  margin: 0 auto;
 }
