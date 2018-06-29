@@ -4,8 +4,19 @@ const bcrypt = require('bcrypt-nodejs')
 
 
 const userSchema = new Schema({
+  firstName: String,
+  lastName: String,
   email: {type: String, unique: true, lowercase: true},
-  password: String
+  password: String,
+  homeCity: String,
+  posts: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Post'
+  }],
+  comments: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Comment'
+  }]
 });
 
 // On Save Hook, encrypt password

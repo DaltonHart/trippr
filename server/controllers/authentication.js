@@ -14,8 +14,11 @@ exports.signin = function (req, res, next) {
 }
 
 exports.signup = function (req, res, next) {
+  const firstName = req.body.firstName;
+  const lastName = req.body.lastName;
   const email = req.body.email;
   const password = req.body.password;
+  const homeCity = req.body.homeCity;
   // See if a user with the given email exists
 
 
@@ -35,8 +38,11 @@ exports.signup = function (req, res, next) {
     }
 
     const user = new User({
+      firstName: firstName,
+      lastName: lastName,
       email: email,
-      password: password
+      password: password,
+      homeCity: homeCity
     });
 
     user.save(function (err) {
