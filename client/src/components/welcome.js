@@ -27,7 +27,6 @@ export default () => {
           <article className="col">
           <h4>Topic</h4>
           <p>viral butcher beard Vice literally Cosby sweater gastropub Wes Anderson lomo mumblecore 8-bit biodiesel flexitarian street art sartorial keffiyeh vinyl single-origin coffee selfies VHS PBR&B art party deep v banjo banh mi +1 small batch mixtape hella cray twee fap post-ironic normcore squid mlkshk sriracha tofu slow-carb ugh. wolf ethical shabby chic you probably haven't heard of them Kickstarter locavore Thundercats photo booth stumptown umami Carles Shoreditch DIY. </p>
-
             </article>
         </section>
       </div>
