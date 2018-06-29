@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 .error {
     color: red;
 }
@@ -17,4 +21,17 @@ header{
 }
 .nav-wrapper{
   width: 100%;
+  max-height: 10vh;
+}
+
+.carousel-container{
+  width: 100%;
+  max-height: 30vh;
+}
+
+.slider{
+  max-height: 45vh;
+}
+.slider img {
+  max-height: 45vh;
 }
