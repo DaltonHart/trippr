@@ -12,6 +12,7 @@ module.exports = function (app) {
     console.log('FAACK', req.user.firstName)
     res.send({message: `Hello, ${req.user.firstName}, you joined the Trippr community on ${date}. How is the weather in ${req.user.homeCity}?`});
   });
+  app.put('/editProfile/:user_id', requireAuth)
   app.post('/signup', Authentication.signup);
   app.post('/signin', requireSignIn, Authentication.signin);
   app.get('/logout', (req,res) => {

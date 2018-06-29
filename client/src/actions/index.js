@@ -73,7 +73,7 @@ export function fetchMessage() {
       headers: {authorization: localStorage.getItem('token')}
     })
       .then(response => {
-         console.log("FETCH's MEssage: ", response.data.message)
+         console.log("STOP TRYIN TO MAKE FETCH HAPPEN: ", response.data.message)
         dispatch({
           type: FETCH_MESSAGE,
           payload: response.data.message
