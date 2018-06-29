@@ -16,7 +16,11 @@ const userSchema = new Schema({
   comments: [{
     type: Schema.Types.ObjectId,
     ref: 'Comment'
-  }]
+  }],
+  joinDate: {
+    type: Date,
+    default: Date.now()
+  }
 });
 
 // On Save Hook, encrypt password

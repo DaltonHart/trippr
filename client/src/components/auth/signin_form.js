@@ -23,7 +23,7 @@ class SigninForm extends Component {
         <form onSubmit={handleSubmit}>
 
           <Field
-            label="Username"
+            label="Email address"
             name="email"
             component={renderTextField}
             type="text"/>
