@@ -33,9 +33,17 @@ export function signoutUser() {
   }
 }
 
-export function signupUser({email, password, passwordConfirmation}) {
+export function signupUser({firstName, lastName, email, password, passwordConfirmation, homeCity}) {
+  console.log(`first name is: ${firstName}`)
   return function (dispatch) {
-    axios.post(`${ROOT_URL}/signup`, {email, password, passwordConfirmation})
+    axios.post(`${ROOT_URL}/signup`,
+      { firstName,
+        lastName,
+        email,
+        password,
+        passwordConfirmation,
+        homeCity
+      })
       .then(response => {
         dispatch({type: AUTH_USER})
         localStorage.setItem('token', response.data.token)

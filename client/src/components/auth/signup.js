@@ -12,8 +12,8 @@ class Signup extends Component {
     }
   }
 
-  handleSubmit({email, password, passwordConfirmation}) {
-    this.props.signupUser({email, password, passwordConfirmation})
+  handleSubmit({firstName, lastName, email, password, passwordConfirmation, homeCity }) {
+    this.props.signupUser({firstName, lastName, email, password, passwordConfirmation, homeCity})
   }
 
   getRedirectPath() {

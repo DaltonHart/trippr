@@ -14,7 +14,7 @@ class Feature extends Component {
       <div>
         <p><strong>Welcome to the secure page!</strong></p>
         <br/>
-        <p>Here's a secret response from the server that your token returned:</p>
+        <p>Here is a secret response from the server that your token returned:</p>
         ____________________________________________________________
         <p>{this.props.message}</p>
         ____________________________________________________________
