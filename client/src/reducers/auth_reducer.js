@@ -1,4 +1,4 @@
-import { AUTH_USER, UNAUTH_USER, AUTH_ERROR, FETCH_MESSAGE } from '../actions/types'
+import { AUTH_USER, UNAUTH_USER, AUTH_ERROR, FETCH_MESSAGE, FETCH_CITIES } from '../actions/types'
 
 export default function authReducer(state = {}, action) {
   switch (action.type) {
@@ -10,6 +10,8 @@ export default function authReducer(state = {}, action) {
       return {...state, error: action.payload}
     case FETCH_MESSAGE:
       return {...state, message: action.payload}
+    case FETCH_CITIES:
+      return {...state, cities: action.payload}
     default:
       return state
   }

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { UNAUTH_USER, AUTH_USER, AUTH_ERROR, FETCH_MESSAGE } from './types'
+import { UNAUTH_USER, AUTH_USER, AUTH_ERROR, FETCH_MESSAGE, FETCH_CITIES } from './types'
 const ROOT_URL = 'http://localhost:3090'
 
 export function signinUser({email, password}) {
@@ -81,3 +81,32 @@ export function fetchMessage() {
       })
   }
 }
+
+
+export function fetchCities() {
+  console.log('fetching cities')
+  return function (dispatch) {
+    console.log('is gettin stuffs')
+    axios.get('http://localhost:3090/api/cities/', {
+      headers: {authorization: localStorage.getItem('token')}
+    })
+      .then(response => {
+         console.log("fak: ", response.data)
+        dispatch({
+          type: FETCH_CITIES,
+          payload: response.data,
+        })
+      })
+  }
+}
+
+// export function fetchCities(){
+//  return function (){
+//   console.log('fetchCities running');
+//   axios.get('http://localhost:3090/api/cities/')
+//   .then(response => console.log('here is the request:', response))
+//   // request.then(response => {
+//   //   console.log('here is the request:', response.data);
+//   // })
+//  }
+// }

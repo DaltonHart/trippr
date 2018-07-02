@@ -16,6 +16,7 @@ import Profile from './components/profile'
 import reducers from './reducers'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import EditProfile from './components/editProfile'
+import Main from './components/Main'
 
 
 // Needed for onTouchTap with material-ui
@@ -44,6 +45,7 @@ ReactDOM.render(
           <Route path="/signup" component={Signup}/>
           <PrivateRoute path="/editProfile" component={EditProfile}/>
           <PrivateRoute path="/profile" component={Profile}/>
+          <PrivateRoute path="/main" component={Main}/>
         </div>
       </MuiThemeProvider>
     </Router>

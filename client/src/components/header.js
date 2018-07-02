@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import compass from '../images/compass.svg'
 import '../style/style.css'
+import ModalLogin from "./modal"
 
 class Header extends Component {
 
@@ -42,6 +43,7 @@ class Header extends Component {
             {this.renderLinks()}
           </ul>
         </nav>
+        <ModalLogin/>
         </div>
       </header>
     )
