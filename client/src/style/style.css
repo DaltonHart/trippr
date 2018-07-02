@@ -17,7 +17,7 @@
 .navbar ul{
   float: right;
   align-content: right;
-  width: 100%;
+  width: 90%;
 }
 header{
   display: flex;
@@ -65,4 +65,11 @@ article{
   margin: 0 auto;
   background-color: rgb(247, 243, 243);
   padding: 1em;
+}
+
+/* Profile Page */
+.signUpForm {
+}
+
+.signUpForm form div div{
 }
