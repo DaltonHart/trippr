@@ -1,6 +1,7 @@
 const Authentication = require('./controllers/authentication');
 const passportService = require('./services/passport');
 const passport = require('passport');
+const controllers = require('./controllers');
 
 const requireAuth = passport.authenticate('jwt', {session: false});
 const requireSignIn = passport.authenticate('local', {session: false});
@@ -19,4 +20,13 @@ module.exports = function (app) {
      req.user = null;
      res.json({msg: "logged out"})
  })
+ 
+ app.get('/api/cities', controllers.city.index);
+
+
+
+ app.get('/api/cities/:id', controllers.city.show)
+ app.get('/api/posts', controllers.post.index);
+ app.get('/api/posts/:id', controllers.post.show)
+ app.get('/api', controllers.api.index);
 }

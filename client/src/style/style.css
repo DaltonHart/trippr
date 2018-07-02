@@ -66,10 +66,16 @@ article{
   background-color: rgb(247, 243, 243);
   padding: 1em;
 }
+button{
+  background-color: cornflowerblue !important;
+}
 
+.slider-control-bottomcenter li button {
+  background-color: transparent !important;
+}
 /* Profile Page */
 .signUpForm {
+  width: 40%;
+  margin: 0 auto;
 }
 
-.signUpForm form div div{
-}
