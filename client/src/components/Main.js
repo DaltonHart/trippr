@@ -3,13 +3,17 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import '../style/style.css'
 import CityList from './CityList'
+import CityDetailContainer from './CityDetailContainer'
 
 class Main extends Component {
 
 
   render() {
     return (
-      <CityList/>
+      <div>
+        <CityList/>
+        <CityDetailContainer />
+      </div>
     )
   }
 }
