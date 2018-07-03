@@ -35,15 +35,16 @@ class Header extends Component {
   render() {
     return (
       <header className="row">
-        <img src={compass} alt="logo" className="logo col"/>
+        <img src={compass} alt="logo" className="logo"/>
         <div className="nav-wrapper col">
+        <div className="row">
         <nav className="navbar navbar-light">
-          <Link to="/" className="navbar-brand">Trippr</Link>
-          <ul className="nav navbar-nav">
+          <Link to="/main" className="navbar-brand">Trippr</Link>
+          <ul className="nav navbar-nav col">
             {this.renderLinks()}
           </ul>
         </nav>
-        <ModalLogin/>
+        </div>
         </div>
       </header>
     )

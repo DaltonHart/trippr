@@ -32,7 +32,7 @@ class CityList extends Component {
 
     return (
     <div>
-      <div className="Cities">
+      <div className="cities">
         <Cities towns={this.state.cities}/>
         </div>
     </div>
