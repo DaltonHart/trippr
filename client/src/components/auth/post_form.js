@@ -23,8 +23,7 @@ class PostForm extends Component {
     console.log("this is the post form cities", this.props.cities)
 
     let menuItems = this.props.cities.map((option, index) => {
-      return <MenuItem value={index} key={index} primaryText={option.name} label={option.name}/>
-
+      return <MenuItem value={index} key={index} primaryText={option.name} label={option.name} onClick={this.logselect}/>
     });
 
     return (

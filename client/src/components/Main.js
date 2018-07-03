@@ -34,7 +34,7 @@ class Main extends Component {
     return (
       <div className="main">
         <CityList/>
-        <CityDetailContainer cities = {this.state.cities} city=/>
+        <CityDetailContainer cities = {this.state.cities} />
       </div>
     )
   }
