@@ -8,7 +8,7 @@ CityList = [
         photo : 'https://static.boredpanda.com/blog/wp-content/uploads/2016/01/tokyo-streets-night-photography-masashi-wakui-29.jpg',
     },
     {
-        name : 'San Fransico',
+        name : 'San Francisco',
         photo : 'https://secure.parksandresorts.wdpromedia.com/resize/mwImage/1/1200/600/90/secure.parksandresorts.wdpromedia.com/media/abd/refresh/north-america/san-francisco-tours/adventures-by-disney-north-america-san-francisco-long-weekend-hero-01-golden-gate-bridge.jpg',
     },
     {
