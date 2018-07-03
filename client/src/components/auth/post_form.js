@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { reduxForm, Field } from 'redux-form'
 import RaisedButton from 'material-ui/RaisedButton'
-import { renderTextField } from './form_helpers'
+import DropDownMenu from 'material-ui/DropDownMenu'
+import MenuItem from 'material-ui/MenuItem'
+import { renderTextField } from './form_helpers';
 
 class PostForm extends Component {
 
@@ -13,8 +15,17 @@ class PostForm extends Component {
     }
   }
 
+  handleChange = (event, index, value) => this.setState({value});
+
   render() {
     const {handleSubmit} = this.props
+
+    console.log("this is the post form cities", this.props.cities)
+
+    let menuItems = this.props.cities.map((option, index) => {
+      return <MenuItem value={index} key={index} primaryText={option.name} label={option.name}/>
+
+    });
 
     return (
       <div className="PostForm">
@@ -33,11 +44,10 @@ class PostForm extends Component {
             component={renderTextField}
             type="text"/>
 
-          <Field
-            label="City"
-            name="city"
-            component={renderTextField}
-            type="text"/>
+          <DropDownMenu value="city" onChange={this.handleChange}>
+            <MenuItem value="Select a city"/>
+            {menuItems}
+          </DropDownMenu>
 
           <RaisedButton type="submit" label="Submit post" primary={true} labelColor={'#FFFFFF'}/>
         </form>

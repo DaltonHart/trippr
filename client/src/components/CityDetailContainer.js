@@ -11,7 +11,7 @@ class CityDetailContainer extends Component {
     return(
       <div>
         <h3>I am a container for the city detail!</h3>
-        <CityDetail/>
+        <CityDetail cities = {this.props.cities} />
       </div>
     )
   }

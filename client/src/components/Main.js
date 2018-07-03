@@ -3,16 +3,38 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import '../style/style.css'
 import CityList from './CityList'
+import CityModel from '../models/city'
 import CityDetailContainer from './CityDetailContainer'
 
 class Main extends Component {
+  constructor(){
+    super()
+    this.state = {
+      cities: [],
+    }
 
+    
+  }
+
+  componentDidMount(){
+    this.fetchData()
+  }
+
+  fetchData(){
+    CityModel.all().then( (res) => {
+      console.log('Here is the res:',res)
+      this.setState ({
+        cities: res.data,
+        city: ''
+      })
+    })
+  }
 
   render() {
     return (
       <div>
         <CityList/>
-        <CityDetailContainer />
+        <CityDetailContainer cities = {this.state.cities} city=/>
       </div>
     )
   }

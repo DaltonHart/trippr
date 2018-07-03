@@ -26,6 +26,7 @@ class CityDetail extends Component{
 
   render() {
     const { open } =this.state;
+    console.log("I am the city detail component", this.props.cities)
     return(
       <div>
         <h4>City Name</h4>
@@ -33,7 +34,7 @@ class CityDetail extends Component{
 
         <RaisedButton type="" onClick={this.onOpenModal} label="Add Post" primary={true} labelColor={'#FFFFFF'}/>
           <Modal open={open} onClose={this.onCloseModal}>
-            <PostForm/>
+            <PostForm cities={this.props.cities}/>
           </Modal>
           <PostList/>
       </div>
@@ -43,8 +44,6 @@ class CityDetail extends Component{
 
   function mapStateToProps(state) {
     return {
-      cities: state.auth.cities,
-      city: state.auth.city,
       user: state.auth.user
     }
   }
