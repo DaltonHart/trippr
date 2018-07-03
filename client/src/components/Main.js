@@ -32,7 +32,7 @@ class Main extends Component {
 
   render() {
     return (
-      <div>
+      <div className="main">
         <CityList/>
         <CityDetailContainer cities = {this.state.cities} city=/>
       </div>

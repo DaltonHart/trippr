@@ -9,9 +9,8 @@ import CityDetail from './CityDetail'
 class CityDetailContainer extends Component {
   render() {
     return(
-      <div>
-        <h3>I am a container for the city detail!</h3>
-        <CityDetail cities = {this.props.cities} />
+      <div className="cityDetail">
+        <CityDetail/>
       </div>
     )
   }

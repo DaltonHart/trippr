@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import * as actions from '../actions'
 import '../style/style.css'
 import Cities from './Cities'
 import CityModel from '../models/city'
@@ -31,7 +29,7 @@ class CityList extends Component {
   render() {
 
     return (
-    <div>
+    <div className="cityContainer">
       <div className="cities">
         <Cities towns={this.state.cities}/>
         </div>
