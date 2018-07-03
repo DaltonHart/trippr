@@ -19,8 +19,10 @@ class Cities extends Component {
   
     return (
     <div>
+      <section className="cityTitle">
       <h1>Cities</h1>
-      <div>
+      </section>
+      <div className="towns">
       {towns}
       </div>
       </div>

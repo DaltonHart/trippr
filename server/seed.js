@@ -5,15 +5,27 @@ const Schema = mongoose.Schema;
 CityList = [
     {
         name : 'Tokyo',
-        photo : 'image url',
+        photo : 'https://static.boredpanda.com/blog/wp-content/uploads/2016/01/tokyo-streets-night-photography-masashi-wakui-29.jpg',
     },
     {
-        name : 'Tokyo',
-        photo : 'image url',
+        name : 'San Fransico',
+        photo : 'https://secure.parksandresorts.wdpromedia.com/resize/mwImage/1/1200/600/90/secure.parksandresorts.wdpromedia.com/media/abd/refresh/north-america/san-francisco-tours/adventures-by-disney-north-america-san-francisco-long-weekend-hero-01-golden-gate-bridge.jpg',
     },
     {
-        name : 'Tokyo',
-        photo : 'image url',
+        name : 'New York',
+        photo : 'https://www.ediblemanhattan.com/wp-content/uploads/2016/04/header-new-york.jpg',
+    },
+    {
+        name : 'Seattle',
+        photo : 'http://www.heritageschoolofinteriordesign.com/main/wp-content/uploads/2018/05/103845788-_sites-default-files-images-103845788-GettyImages-155735310.1910x1000.jpg',
+    },
+    {
+        name : 'Austin',
+        photo : 'https://www.mymilestone.com/blog/wp-content/uploads/2017/12/forecast-1.jpg',
+    },
+    {
+        name : 'Dubai',
+        photo : 'https://www.dubai.it/wp-content/uploads/sites/32/Dubai-Marina.jpg',
     },
 ]
 
@@ -43,18 +55,19 @@ db.City.remove({}, function(err, cities){
       if (err) { return console.log('ERROR', err); }
       console.log("all cities:", cities);
       console.log("created", cities.length, "cities");
-    });
-    
-  });
-
-  db.Post.remove({}, function(err, posts){
-    // code in here runs after all posts are removed
-    db.Post.create(PostList, function(err, posts){
-      // code in here runs after all posts are created
-      if (err) { return console.log('ERROR', err); }
-      console.log("all posts:", posts);
-      console.log("created", posts.length, "posts");
       process.exit();
     });
     
   });
+
+//   db.Post.remove({}, function(err, posts){
+//     // code in here runs after all posts are removed
+//     db.Post.create(PostList, function(err, posts){
+//       // code in here runs after all posts are created
+//       if (err) { return console.log('ERROR', err); }
+//       console.log("all posts:", posts);
+//       console.log("created", posts.length, "posts");
+//       process.exit();
+//     });
+    
+//   });

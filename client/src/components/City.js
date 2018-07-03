@@ -4,13 +4,21 @@ import { Link } from 'react-router-dom'
 import '../style/style.css'
 
 class City extends Component {
-
-
+  
   render() {
+    var divStyle = {
+      backgroundImage: `url(${this.props.city.photo})`
+
+    };
+
     return (
-      <div >
-        <h2>{this.props.city.name}</h2>
+      <div className="card">
+        <div className="flip">
+          <div className="front" style={divStyle}>
+           <h1 className="text-shadow">{this.props.city.name}</h1>
+          </div>
         </div>
+      </div>
     )
   }
 }
