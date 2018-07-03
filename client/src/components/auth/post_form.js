@@ -6,6 +6,10 @@ import MenuItem from 'material-ui/MenuItem'
 import { renderTextField } from './form_helpers';
 
 class PostForm extends Component {
+   constructor() {
+      super()
+      this.state = {value: 'Select a city'}
+   }
 
   renderAlert() {
     if (this.props.errorMessage) {
@@ -44,12 +48,12 @@ class PostForm extends Component {
             component={renderTextField}
             type="text"/>
 
-          <DropDownMenu value="city" onChange={this.handleChange}>
-            <MenuItem value="Select a city"/>
+          <DropDownMenu value={this.state.value} onChange={this.handleChange}>
+            <MenuItem value="Select a city" selected="selected" disabled="disabled" label="Select a city"/>
             {menuItems}
           </DropDownMenu>
 
-          <RaisedButton type="submit" label="Submit post" primary={true} labelColor={'#FFFFFF'}/>
+          <RaisedButton type="submit" label="Submit post" primary={true} labelColor={'#FFFFFF'} />
         </form>
       </div>
     )

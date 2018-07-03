@@ -10,7 +10,8 @@ class CityDetailContainer extends Component {
   render() {
     return(
       <div className="cityDetail">
-        <CityDetail/>
+        <CityDetail cities={this.props.cities}
+        selectedCity={this.props.selectedCity}/>
       </div>
     )
   }
