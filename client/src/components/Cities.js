@@ -18,14 +18,14 @@ class Cities extends Component {
     })
   
     return (
-    <div>
+    <div className="cityContainer">
       <section className="cityTitle">
       <h1>Cities</h1>
       </section>
       <div className="towns">
       {towns}
       </div>
-      </div>
+    </div>
     )
   }
 }
