@@ -11,10 +11,18 @@ class Main extends Component {
     super()
     this.state = {
       cities: [],
+      selectedCity: []
     }
-
-    
+    this.onSelectCity = this.onSelectCity.bind(this)
   }
+
+  onSelectCity(city){
+     console.log("I CLICKED A CITY")
+     this.setState({
+        selectedCity: city
+     })
+     console.log("HELLO CITY: ", this.state.selectedCity)
+ }
 
   componentDidMount(){
     this.fetchData()
@@ -24,17 +32,27 @@ class Main extends Component {
     CityModel.all().then( (res) => {
       console.log('Here is the res:',res)
       this.setState ({
-        cities: res.data,
-        city: ''
+        cities: res.data
       })
     })
   }
 
   render() {
+     console.log("Here are the cities: ", this.state.cities)
     return (
       <div className="main">
+<<<<<<< HEAD
         <CityList/>
         <CityDetailContainer cities = {this.state.cities} />
+=======
+        <CityList
+        cities = {this.state.cities}
+        onSelectCity = {this.onSelectCity}
+        selectedCity = {this.state.selectedCity}/>
+        <CityDetailContainer
+        cities = {this.state.cities}
+        selectedCity = {this.state.selectedCity}/>
+>>>>>>> 215d73610b2418888f1538bdd00c3fb6a0988b53
       </div>
     )
   }

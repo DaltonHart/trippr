@@ -30,7 +30,7 @@ class CityDetail extends Component{
     return(
       <div className="cityDetailConatiner">
         <div className="heroCity">
-        <h4>City Name</h4>
+        <h4>{this.props.selectedCity.name}</h4>
         <h6>Country Name</h6>
         </div>
         <div className="postHeader">

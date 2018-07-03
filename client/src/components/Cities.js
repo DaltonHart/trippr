@@ -10,10 +10,13 @@ class Cities extends Component {
       return (
         <City
           city={city}
+          selectedCity={this.props.selectedCity}
+          onSelectCity = {this.props.onSelectCity}
+          onClick={this.props.onSelectCity}
           key={i} />
       )
     })
-  
+
     return (
     <div>
       <section className="cityTitle">

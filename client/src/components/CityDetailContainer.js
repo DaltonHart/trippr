@@ -7,7 +7,12 @@ class CityDetailContainer extends Component {
   render() {
     return(
       <div className="cityDetail">
+<<<<<<< HEAD
         <CityDetail cities={this.props.cities}/>
+=======
+        <CityDetail cities={this.props.cities}
+        selectedCity={this.props.selectedCity}/>
+>>>>>>> 215d73610b2418888f1538bdd00c3fb6a0988b53
       </div>
     )
   }

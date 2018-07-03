@@ -5,33 +5,14 @@ import CityModel from '../models/city'
 
 class CityList extends Component {
 
-  constructor(){
-    super()
-    this.state = {
-      cities: [],
-    }
-  }
-
-  componentDidMount(){
-    this.fetchData()
-  }
-
-  fetchData(){
-    CityModel.all().then( (res) => {
-      console.log('Here is the res:',res)
-      this.setState ({
-        cities: res.data,
-        city: ''
-      })
-    })
-  }
-
   render() {
 
     return (
     <div className="cityContainer">
       <div className="cities">
-        <Cities towns={this.state.cities}/>
+        <Cities towns={this.props.cities}
+        selectedCity={this.props.selectedCity}
+        onSelectCity = {this.props.onSelectCity}/>
         </div>
     </div>
     )
