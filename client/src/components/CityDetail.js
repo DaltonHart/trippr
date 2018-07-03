@@ -27,15 +27,19 @@ class CityDetail extends Component{
   render() {
     const { open } =this.state;
     return(
-      <div>
+      <div className="cityDetailConatiner">
+        <div className="heroCity">
         <h4>City Name</h4>
-        <p>I am the city detail page!</p>
-
-        <RaisedButton type="" onClick={this.onOpenModal} label="Add Post" primary={true} labelColor={'#FFFFFF'}/>
+        <h6>Country Name</h6>
+        </div>
+        <div className="postHeader">
+          <h4>Posts</h4>
+          <RaisedButton type="" onClick={this.onOpenModal} label="+" primary={true} labelColor={'#FFFFFF'} className="addButton"/>
           <Modal open={open} onClose={this.onCloseModal}>
             <PostForm/>
           </Modal>
-          <PostList/>
+          </div>
+          <PostList className="postList"/>
       </div>
     )
   }

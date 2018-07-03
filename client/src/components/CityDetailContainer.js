@@ -10,7 +10,6 @@ class CityDetailContainer extends Component {
   render() {
     return(
       <div className="cityDetail">
-        <h3>I am a container for the city detail!</h3>
         <CityDetail/>
       </div>
     )

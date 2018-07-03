@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import * as actions from '../actions'
-import { Link } from 'react-router-dom'
 import '../style/style.css'
 import City from './City'
 
@@ -18,7 +15,7 @@ class Cities extends Component {
     })
   
     return (
-    <div className="cityContainer">
+    <div>
       <section className="cityTitle">
       <h1>Cities</h1>
       </section>

@@ -8,8 +8,11 @@ import Post from './Post'
 class PostList extends Component {
   render() {
     return(
-      <div>
-        <h4>I am a container for the post list!</h4>
+      <div className="postList">
+        <Post />
+        <Post />
+        <Post />
+        <Post />
         <Post />
       </div>
     )
