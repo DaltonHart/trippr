@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { UNAUTH_USER, AUTH_USER, AUTH_ERROR, FETCH_MESSAGE, FETCH_CITIES } from './types'
+import { UNAUTH_USER, AUTH_USER, AUTH_ERROR, FETCH_MESSAGE, FETCH_CITIES, FETCH_ONE_CITY, FETCH_ONE_CITY_PENDING, FETCH_ONE_CITY_SUCCESS, FETCH_ONE_CITY_FAILURE } from './types'
 const ROOT_URL = 'http://localhost:3090'
 
 export function signinUser({email, password}) {
@@ -100,6 +100,38 @@ export function fetchCities() {
   }
 }
 
+export function fetchOneCityPending(id) {
+  return {
+    type: 'FETCH_ONE_CITY_PENDING'
+  }
+}
+
+function fetchOneCitySuccess(city) {
+  return {
+    type: 'FETCH_ONE_CITY_SUCCESS',
+    city
+  }
+}
+
+function fetchOneCityFailure(err) {
+  return {
+    type: 'FETCH_ONE_CITY_FAILURE',
+    err
+  }
+}
+
+export function fetchOneCity(id) {
+  return async dispatch => {
+    dispatch(fetchOneCityPending(id))
+    try {
+      const {city} = await axios.get(`${ROOT_URL}/api/cities/${id}`)
+      return dispatch(fetchOneCitySuccess(city))
+    }
+      catch(err) {
+        dispatch(fetchOneCityFailure(err))
+      }
+  }
+}
 // export function fetchCities(){
 //  return function (){
 //   console.log('fetchCities running');
