@@ -25,11 +25,14 @@ class CityDetail extends Component{
   };
 
   render() {
+    var divStyle = {
+      backgroundImage: `url(${this.props.selectedCity.photo})`
+    };
     const { open } =this.state;
     console.log("I am the city detail component", this.props.cities)
     return(
       <div className="cityDetailConatiner">
-        <div className="heroCity">
+        <div className="heroCity" style={divStyle}>
         <h4>{this.props.selectedCity.name}</h4>
         <h6>Country Name</h6>
         </div>
