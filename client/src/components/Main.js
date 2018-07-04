@@ -41,10 +41,6 @@ class Main extends Component {
      console.log("Here are the cities: ", this.state.cities)
     return (
       <div className="main">
-<<<<<<< HEAD
-        <CityList/>
-        <CityDetailContainer cities = {this.state.cities} />
-=======
         <CityList
         cities = {this.state.cities}
         onSelectCity = {this.onSelectCity}
@@ -52,7 +48,6 @@ class Main extends Component {
         <CityDetailContainer
         cities = {this.state.cities}
         selectedCity = {this.state.selectedCity}/>
->>>>>>> 215d73610b2418888f1538bdd00c3fb6a0988b53
       </div>
     )
   }

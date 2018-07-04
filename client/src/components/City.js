@@ -17,7 +17,6 @@ selectCity(){
   render() {
     var divStyle = {
       backgroundImage: `url(${this.props.city.photo})`
-
     };
 
     return (
