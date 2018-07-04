@@ -5,6 +5,7 @@ const Post = require('./post.js');
 const citySchema = new Schema({
   name : String,
   photo : String,
+  country : String,
   posts : [{
     type: Schema.Types.ObjectId,
     ref: 'Post',
