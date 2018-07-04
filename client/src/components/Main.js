@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
 import '../style/style.css'
 import CityList from './CityList'
 import CityModel from '../models/city'
@@ -11,7 +10,7 @@ class Main extends Component {
     super()
     this.state = {
       cities: [],
-      selectedCity: []
+      selectedCity: [],
     }
     this.onSelectCity = this.onSelectCity.bind(this)
   }

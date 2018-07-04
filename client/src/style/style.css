@@ -161,17 +161,25 @@ p {
 
 .cityDetail {
   width: 100%;
+  height: 90vh;
   margin: 0;
 }
-
+.cityDetailContainer{
+  height: 90vh !important;
+}
 .cityContainer{
   width: 50vh;
+  height: 90vh;
 }
 .heroCity {
   display: flex;
   flex-direction: column;
+  color: white;
   width: 100%;
-  height: 5em;
+  height: 10em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -80px;
   background-color: #999;
   align-items: center;
 }
@@ -270,3 +278,4 @@ p {
 }
 
 
+/* post form */
