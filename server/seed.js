@@ -7,6 +7,7 @@ CityList = [
         name : 'Tokyo',
         country : 'Japan',
         photo : 'https://static.boredpanda.com/blog/wp-content/uploads/2016/01/tokyo-streets-night-photography-masashi-wakui-29.jpg',
+        
     },
     {
         name : 'San Francisco',
