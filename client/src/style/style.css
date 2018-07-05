@@ -210,7 +210,7 @@ p {
   margin: 10px 5px;
 }
 .postList {
-  height: 70vh;
+  height: 60vh;
   overflow: scroll;
 }
 
@@ -245,7 +245,7 @@ p {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.116);
   box-shadow: inset hsla(0, 0, 0, .2) 0 64px 64px 16px;
-  
+
 }
 .blog-author h3 {
   color: #fff;

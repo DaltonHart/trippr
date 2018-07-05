@@ -29,13 +29,13 @@ class Signin extends Component {
     if (locationState && locationState.from.pathname) {
       return locationState.from.pathname // redirects to referring url
     } else {
-      return '/'
+      return '/main'
     }
   }
 
   render() {
     return (this.props.authenticated) ?
-      <Redirect to="/profile" />
+      <Redirect to="/main" />
       :
       <div>
         {this.displayRedirectMessages()}
