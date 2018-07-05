@@ -3,11 +3,26 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import compass from '../images/compass.svg'
 import '../style/style.css'
-import ModalLogin from "./modal"
 
 class Header extends Component {
+  constructor() {
+    super()
+    this.state = {
+      open: false
+    }
+  }
+
+  onOpenModal = () => {
+    this.setState({ open: true });
+  };
+
+  onCloseModal = () => {
+    this.setState({ open: false });
+  };
 
   renderLinks() {
+    const { open } =this.state;
+
     if (this.props.authenticated) {
       return [
         <li key={1} className="nav-item">

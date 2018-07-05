@@ -47,7 +47,7 @@ class PostForm extends Component {
             component={renderTextField}
             type="text"/>
 
-          <DropDownMenu value={this.state.value} onChange={this.handleChange}>
+          <DropDownMenu className="dropdown" value={this.state.value} onChange={this.handleChange}>
             <MenuItem value="Select a city" selected="selected" disabled="disabled" label="Select a city"/>
             {menuItems}
           </DropDownMenu>

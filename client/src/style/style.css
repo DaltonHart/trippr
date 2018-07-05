@@ -279,3 +279,53 @@ p {
 
 
 /* post form */
+.PostForm{
+  display: flex !important;
+  flex-direction: column !important;
+}
+.PostForm div{
+  display: block !important;
+  margin-bottom: 1em;
+  padding: 0 !important;
+  font-family: 'Roboto Mono';
+}
+
+/* Sign in Form */
+
+.signinForm{
+  padding: 2em;
+  margin: 2em;
+  width: 50%;
+  background: whitesmoke;
+}
+
+.signinForm hr{
+  border-top: 2px rgb(78, 76, 76) !important;
+  border-left: none rgb(224, 224, 224);
+  border-right: none rgb(224, 224, 224);
+  border-bottom: 1px solid rgb(78, 76, 76) !important;
+  bottom: 8px;
+  box-sizing: content-box;
+  margin: 0px;
+  position: absolute;
+  width: 100%;
+}
+.signUpForm{
+  background: whitesmoke;
+}
+.signUpForm{
+  padding: 2em;
+  margin: 2em;
+  width: 50%;
+}
+.signUpForm hr{
+  border-top: 2px rgb(78, 76, 76) !important;
+  border-left: none rgb(224, 224, 224);
+  border-right: none rgb(224, 224, 224);
+  border-bottom: 1px solid rgb(78, 76, 76) !important;
+  bottom: 8px;
+  box-sizing: content-box;
+  margin: 0px;
+  position: absolute;
+  width: 100%;
+}
