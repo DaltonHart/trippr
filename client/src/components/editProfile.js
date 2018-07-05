@@ -9,7 +9,7 @@ class EditProfile extends Component {
 
       const {handleSubmit} = this.props
       return(
-         <div>
+         <div className="editForm">
             <h1> Edit Form </h1>
             <form onSubmit={handleSubmit}>
 

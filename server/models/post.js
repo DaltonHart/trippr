@@ -7,11 +7,6 @@ const postSchema = new Schema({
   title : String,
   body : String,
   photo : String,
-  city : [{
-     type: Schema.Types.ObjectId,
-     ref: 'City',
-     default: null,
-   }],
 });
 
 

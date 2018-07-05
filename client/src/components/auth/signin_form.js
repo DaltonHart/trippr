@@ -18,7 +18,7 @@ class SigninForm extends Component {
     const {handleSubmit} = this.props
 
     return (
-      <div>
+      <div className="signinForm">
         {this.renderAlert()}
         <form onSubmit={handleSubmit}>
 
