@@ -329,3 +329,22 @@ p {
   position: absolute;
   width: 100%;
 }
+.editForm{
+  background: whitesmoke;
+}
+.editForm{
+  padding: 2em;
+  margin: 2em;
+  width: 50%;
+}
+.editForm hr{
+  border-top: 2px rgb(78, 76, 76) !important;
+  border-left: none rgb(224, 224, 224);
+  border-right: none rgb(224, 224, 224);
+  border-bottom: 1px solid rgb(78, 76, 76) !important;
+  bottom: 8px;
+  box-sizing: content-box;
+  margin: 0px;
+  position: absolute;
+  width: 100%;
+}
